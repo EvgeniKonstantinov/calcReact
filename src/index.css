@@ -1,0 +1,91 @@
+h3{
+  padding: 20px;
+}
+.BodyCalc{
+  display: -webkit-flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.arrardion_calc{
+  width: 100%;
+}
+.nameItem{
+  width: 44%;
+  float: left;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+.MainBlocItem{
+  width: 90%;
+  border: 1px solid black;
+  height: 50px;
+  margin: 2em;
+  overflow: -webkit-paged-x;
+}
+.priceItem{
+  width: 44%;
+  float: left;
+  text-align: right;
+  margin-top: 15px
+}
+.secondBlockItems{
+  width: 90%;
+  border: 1px solid black;
+  margin: 2em;
+  overflow: -webkit-paged-x;
+}
+.secondBlock_activ{
+  display:block;
+}
+.secondBlock_off{
+  display: none;
+}
+.bigText{
+  margin-top: 15px;
+  padding-left: 20px;
+}
+.optionsBlock{
+  display: flex;
+  margin-top: 15px;
+  padding-left: 20px;
+}
+.switch-btn {
+  display: inline-block;
+  width: 35px;
+  height: 21px;
+  border-radius: 12px;
+  background: #bfbfbf;
+  z-index: 0;
+  margin-top: 15px;
+  margin-left: 10px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition-duration: 300ms;
+}
+.switch-btn::after {
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 18px;
+  background: #fff;
+  top: 0px;
+  transition-duration: 300ms;
+  box-shadow: 0 0 10px 0 #999999;
+  position: absolute;
+  z-index: 1;
+}
+.switch-on {
+  background: #fff;
+  margin-top: 14px;
+  margin-left: 10px;
+}
+.switch-on::after {
+  left: 12px;
+  background: #118c4e;
+}
+.checkBoxOption{
+  width:100%;
+  float:left
+}
