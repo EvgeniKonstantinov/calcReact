@@ -7,7 +7,8 @@ import './index.css';
 class ItemsBar extends React.Component{
     state ={
         activ: "switch-btn switch-off",
-        display_second: "secondBlockItems secondBlock_off"
+        display_second: "secondBlockItems secondBlock_off",
+        fullPrice:10000
     }
     handleClickSlide = (e) =>{
         e.preventDefault()
@@ -61,10 +62,10 @@ class ItemsBar extends React.Component{
                    
                 </div>
                 <div className={display_second} >
-
+                <button onClick={() => { this.props.onFullprice(this.state.fullPrice)}}>Запустить бумеранг</button>
                     <div className="bigText">{bigText}</div>
                     <h3>Список опций</h3>
-                    <OptionsItem fullPrice={fullPrice} key={222} data={listOptions}/>
+                    <OptionsItem  key={222} data={listOptions}/>
                     <h3>Рекомендуемые CMS-платформы</h3>
                     <Recomendate key={333} data={listRecomendate}/>
                 </div>

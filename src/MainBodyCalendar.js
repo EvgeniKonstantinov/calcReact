@@ -113,9 +113,9 @@ class  MainBodyCalendar extends React.Component{
     state = {
         fullPrice: 700
     }
-    // onFullprice = (param) =>{
-    //     this.setState({fullPrice:param})
-    // }
+     onFullprice = (param) =>{
+         this.setState({fullPrice:param})
+     }
     render(){
         const {fullPrice} =this.state
         return(
