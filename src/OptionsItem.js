@@ -20,4 +20,4 @@ class OptionsItem extends React.Component{
      }
 }
 
-export {OptionsItem};
+export {OptionsItem};  
