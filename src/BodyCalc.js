@@ -19,7 +19,7 @@ class BodyCalc extends React.Component{
 
         if(data.length){
             newTemplate =  data.map(function(item) {  
-               return <ItemsBar  key={item.id} data={item} value={this.props.onFullprice()}/>
+               return <ItemsBar  key={item.id} data={item} value={this.props.onFullprice}/>
             })
         } else{
             newTemplate = <p>НИЧЕГО НЕТУ</p>
