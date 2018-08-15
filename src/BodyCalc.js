@@ -9,7 +9,7 @@ class BodyCalc extends React.Component{
     }
     clickPrice =()=>{
          this.props.onFullprice(this.state.fullPrice) 
-         console.log(this.state.fullPrice)
+         console.log(this.props.onFullprice)
     }
     render(){
         const { fullPrice } = this.state
@@ -18,7 +18,7 @@ class BodyCalc extends React.Component{
       
 
         if(data.length){
-            newTemplate =  data.map(function(item) {  
+            newTemplate =  data.map(item => {  
                return <ItemsBar  key={item.id} data={item} value={this.props.onFullprice}/>
             })
         } else{

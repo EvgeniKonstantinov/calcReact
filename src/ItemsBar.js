@@ -17,18 +17,11 @@ class ItemsBar extends React.Component{
         }
         else{
             this.setState({ activ: "switch-btn switch-off",  display_second: "secondBlockItems secondBlock_off" })
-
         }
-
     }
 
     hendleClickMainPrice = ()=>{
-        console.log(this.props.fullPrice)
-        console.log(this.props.data.price)
-
-        console.log('-----------------------------------------')
-        console.log(this.props.fullPrice)
-        console.log(this.props.data.price)
+        this.props.value(this.props.data.price)
     }
 
     render(){
@@ -62,10 +55,9 @@ class ItemsBar extends React.Component{
                    
                 </div>
                 <div className={display_second} >
-                <button onClick={() => { this.props.onFullprice(this.state.fullPrice)}}>Запустить бумеранг</button>
                     <div className="bigText">{bigText}</div>
                     <h3>Список опций</h3>
-                    <OptionsItem  key={222} data={listOptions}/>
+                    <OptionsItem  key={222} optionsValue={this.props.value} data={listOptions}/>
                     <h3>Рекомендуемые CMS-платформы</h3>
                     <Recomendate key={333} data={listRecomendate}/>
                 </div>

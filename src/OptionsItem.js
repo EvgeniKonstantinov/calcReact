@@ -3,16 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 class OptionsItem extends React.Component{
-    // handleClickOptions= (e) =>{
-    //     e.preventDefault()
-    //     const {fullPrice} = this.props
-    //     console.log(fullPrice)
-    // }
+    handleClickOptions= (e) =>{
+        var text = document.getElementsByClassName("kek")[0];
+        var val = text.value;
+        this.props.optionsValue(val)
+        e.preventDefault()
+       
+        console.log(this.value)
+    }
      render(){
        const {data, fullPrice} = this.props
 
         return(
-            <div className="optionsBlock"> {data.map( e => <label className="checkBoxOption" onClick={this.handleClickOptions}> {e.name_options} <input type="checkbox" value={e.price_options}/>  </label>)}</div>
+            <div className="optionsBlock"> {data.map( e => <label className="checkBoxOption" > {e.name_options} <input onClick={this.handleClickOptions} className="kek" type="checkbox" value={e.price_options}/>  </label>)}</div>
         )
      }
 }
